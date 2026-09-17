@@ -1,0 +1,5 @@
+# Redirect old URLs from previous site structure to preserve link equity
+/our-plans/1-day-trail/ /free-trial/ 301
+/our-plans/1-day-trail /free-trial/ 301
+/our-plans/express-pack/ /our-plans/ 301
+/our-plans/express-pack /our-plans/ 301
