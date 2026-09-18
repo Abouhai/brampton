@@ -32,7 +32,7 @@
   --max-w:1140px;
 }
 
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden}
 body{font-family:var(--body);background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:var(--red-soft);text-decoration:none;transition:color .2s}
@@ -51,7 +51,7 @@ a:hover{color:var(--red)}
 }
 .header-inner{display:flex;align-items:center;justify-content:space-between;max-width:var(--max-w);margin:0 auto;padding:0 20px}
 .logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem;color:var(--text)}
-.logo img{height:36px;width:auto}
+.logo img{height:46px;width:auto}
 .nav{display:flex;align-items:center;gap:24px;list-style:none}
 .nav a{color:var(--text-muted);font-size:.88rem;font-weight:500;transition:color .2s;letter-spacing:-.01em}
 .nav a:hover{color:var(--text)}
@@ -63,7 +63,7 @@ a:hover{color:var(--red)}
   transition:all .2s;
 }
 .nav-cta:hover{background:var(--red-deep);box-shadow:0 4px 16px rgba(220,38,38,.3)}
-.hamburger{display:none;background:0;border:0;color:var(--text);font-size:1.5rem;cursor:pointer;padding:4px}
+.hamburger{display:none;background:0;border:0;color:var(--text);font-size:1.5rem;cursor:pointer;padding:4px;order:3;margin-left:auto}
 
 /* ═══════════════════════════════
    HERO
@@ -426,8 +426,9 @@ section{padding:72px 0}
    ═══════════════════════════════ */
 @media(max-width:768px){
   .container{padding:0 16px}
+  .logo img{height:38px}
   .nav{
-    position:fixed;top:61px;left:0;right:0;
+    position:fixed;top:63px;left:0;right:0;
     background:rgba(9,9,11,.97);
     backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
     flex-direction:column;padding:20px 16px;gap:12px;
@@ -435,7 +436,7 @@ section{padding:72px 0}
     transform:translateY(-120%);transition:transform .3s ease;z-index:99;
   }
   .nav.open{transform:translateY(0)}
-  .hamburger{display:block}
+  .hamburger{display:block;order:3;margin-left:auto}
   .hero{padding:64px 0 48px}
   .hero h1{font-size:1.7rem}
   .stats{grid-template-columns:repeat(2,1fr);gap:10px}
